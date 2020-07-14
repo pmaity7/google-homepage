@@ -13,8 +13,10 @@
         }
         body {
             margin: auto;
+            min-height: 100%;
         }
         #navbar {
+            top: 0;
             position: fixed;
             background-color: white; 
             padding: 20px;
@@ -39,6 +41,7 @@
         .container {
             margin: auto;
             text-align: center;
+            
         }
 
         .container #logo {
@@ -46,16 +49,121 @@
             padding-top: 109px;
             width: 272px;
         }
-        #form {
-            border: 1px solid #727272;
+        .container #form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0 auto;
+            border: 1px solid #dfe1e5;
             border-radius: 40px;
-            height: 40px;
+            height: 45px;
             width: 500px;
             align-self: center;
+            justify-content: space-around;
+            margin-bottom: 35px;
         }
 
         #form:hover {
-            box-shadow: 1px 1px 2px #727272;
+            box-shadow: 2px 2px 4px #dfe1e5;
+        }
+
+        #form input {
+            border: transparent;
+            width: 400px;
+            margin: auto;
+            height: 38px;
+            border: transparent;
+        }
+        #form .magnify-glass {
+            height: 20px;
+            width: 20px;
+            opacity: 0.5;
+        }
+        #form .mic {
+            height: 24px;
+            width: 24px;
+        }
+        #buttons {
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        #buttons button {
+            width: 130px;
+            height: 35px;
+            margin-left: 15px;
+            font-family: Arial, sans-serif;
+            color: #4b4848;
+            border: transparent;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        #buttons button:hover {
+            border: 1px solid #c7c3c3;
+            color: rgb(19, 18, 18);
+        }
+
+        #links a {
+            text-decoration: none;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #links a:hover {
+            text-decoration: underline;
+        }
+
+        #language-links {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+        #language-links a {
+            padding-left: 8px;
+        }
+        #language-links a:hover {
+            text-decoration: underline;
+        }
+        #footer {
+            font-family: Arial, sans-serif;
+            bottom: 0;
+            background-color: #e4e9f1;
+            height: 80px;
+            margin-top: 50px;
+            position: fixed;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        #footer #country {
+            padding: 10px 0 10px 25px;
+            font-size: 14px;
+            color: #7c7979;
+            border: 1px solid #d1cccc;
+        }
+        #footer-links {
+            padding: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #footer-links a {
+            font-size: 14px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            color: #635f5f;
+        }
+        #footer-links a:hover{
+            text-decoration: underline;
         }
     </style>
     <body>
@@ -71,18 +179,20 @@
         <div class="container">
             <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
             <div id="form">
+                <span class="magnify-glass"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span>
                 <form>
                     <input type="text" name="search" id="search">
                 </form>
+                <span class="mic"><svg class="HPVvwb" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z" fill="#4285f4"></path><path d="m11 18.08h2v3.92h-2z" fill="#34a853"></path><path d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z" fill="#f4b400"></path><path d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z" fill="#ea4335"></path></svg></span>
             </div>
             <div id="buttons">
                 <button>Google Search</button>
                 <button>I am feeling lucky</button>
             </div>
             <div id="links">
-                <p><a href="#">Updates from Google for India 2020</a></p>
+                <a href="#">Updates from Google for India 2020</a>
                 <div id="language-links">
-                    <p>Google offered in languages: </p>
+                    <p>Google offered in: </p>
                     <a href="#">हिन्दी</a>
                     <a href="#">বাংলা</a>
                     <a href="#">తెలుగు</a>
@@ -96,18 +206,21 @@
             </div>
         </div>
         <div id="footer">
-            <footer>
-                <div>India</div>
-                <div>
+            <div id="country">India</div>
+            <div id="footer-links">
+                <div id="1">
                     <a href="#">Advertising</a>
                     <a href="#">Business</a>
                     <a href="#">About</a>
                     <a href="#">How search works</a>
+                </div>
+                <div id="2">
                     <a href="#">Privacy</a>
                     <a href="#">Terms</a>
                     <a href="#">Settings</a>
                 </div>
-            </footer>
+                
+            </div>
         </div>
     </body>
 </html>
