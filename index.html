@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Google
+        </title>
+    </head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            margin: auto;
+        }
+        #navbar {
+            position: fixed;
+            background-color: white; 
+            padding: 20px;
+            width: 100%;
+        }
+        #navbar-top {
+            display: flex;
+            flex-direction: row;
+            justify-content:flex-end;
+            align-items: center;
+        }
+
+        .navbar-content {
+            padding-left: 10px;
+            font-size: 13px;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar-content img {
+            border-radius: 50%;
+        }
+        .container {
+            margin: auto;
+            text-align: center;
+        }
+
+        .container #logo {
+            margin: 30px;
+            padding-top: 109px;
+            width: 272px;
+        }
+        #form {
+            border: 1px solid #727272;
+            border-radius: 40px;
+            height: 40px;
+            width: 500px;
+            align-self: center;
+        }
+
+        #form:hover {
+            box-shadow: 1px 1px 2px #727272;
+        }
+    </style>
+    <body>
+        <div id="navbar">
+            <nav id="navbar-top">
+                <div class="navbar-content"><a>Gmail</a></div>
+                <div class="navbar-content"><a>Images</a></div>
+                <div class="navbar-content"></div>
+                <div class="navbar-content"><a><img src="https://lh3.googleusercontent.com/ogw/ADGmqu9mpPYteWE0FXw_cOW_bbqU8aFsh7ozK-aulyyz=s32-c-mo"></a></div>
+                
+            </nav>
+        </div>
+        <div class="container">
+            <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
+            <div id="form">
+                <form>
+                    <input type="text" name="search" id="search">
+                </form>
+            </div>
+            <div id="buttons">
+                <button>Google Search</button>
+                <button>I am feeling lucky</button>
+            </div>
+            <div id="links">
+                <p><a href="#">Updates from Google for India 2020</a></p>
+                <div id="language-links">
+                    <p>Google offered in languages: </p>
+                    <a href="#">हिन्दी</a>
+                    <a href="#">বাংলা</a>
+                    <a href="#">తెలుగు</a>
+                    <a href="#">मराठी</a>
+                    <a href="#">தமிழ்</a>
+                    <a href="#">ગુજરાતી</a>
+                    <a href="#">ಕನ್ನಡ</a>
+                    <a href="#">മലയാളം</a>
+                    <a href="#">ਪੰਜਾਬੀ</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <footer>
+                <div>India</div>
+                <div>
+                    <a href="#">Advertising</a>
+                    <a href="#">Business</a>
+                    <a href="#">About</a>
+                    <a href="#">How search works</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Settings</a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
